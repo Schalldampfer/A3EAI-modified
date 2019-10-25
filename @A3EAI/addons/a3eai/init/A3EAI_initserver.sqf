@@ -87,6 +87,7 @@ _markerInfo = call {
 		["utes",[3519.8037, 3703.0649],1000],
 		["woodland_acr",[3884.41,3896.44,0],3700],
 		["zargabad",[3917.6201, 3800.0376],2000],
+		["tanoa",[9304.9746, 10165.39],5500],
 		[_worldname,getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition"),worldSize/2]
 	];
 };

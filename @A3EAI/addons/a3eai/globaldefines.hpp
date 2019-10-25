@@ -11,7 +11,7 @@
 #define PLAYER_UNITS "Epoch_Male_F","Epoch_Female_F" //A3EAI
 //#define LOOT_HOLDER_CLASS "GroundWeaponHolder" //A3XAI
 #define LOOT_HOLDER_CLASS "WH_Loot" //A3EAI
-#define DEFAULT_UNIT_CLASSNAME "i_survivor_F"
+#define DEFAULT_UNIT_CLASSNAME "I_Soldier_EPOCH"
 #define SPACE_FOR_OBJECT "Land_Coil_F"
 //#define PLOTPOLE_OBJECT "Exile_Construction_Flag_Static" //A3XAI
 #define PLOTPOLE_OBJECT "PlotPole_EPOCH" //A3EAI

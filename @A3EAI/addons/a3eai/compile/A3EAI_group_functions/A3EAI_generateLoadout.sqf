@@ -78,12 +78,14 @@ if (_headgearChance call A3EAI_chance) then {
 _magazine = getArray (configFile >> "CfgWeapons" >> _weaponSelected >> "magazines") select 0;
 
 _unit addMagazine _magazine;
+_unit addMagazine _magazine;
 _unit addWeapon _weaponSelected;
 _unit selectWeapon _weaponSelected;
 (_loadout select 0) pushBack _weaponSelected;
 (_loadout select 1) pushBack _magazine;
 if ((getNumber (configFile >> "CfgMagazines" >> _magazine >> "count")) < 6) then {
 	_unit setVariable ["extraMag",true];
+	_unit addMagazine _magazine;
 	_unit addMagazine _magazine;
 };
 
