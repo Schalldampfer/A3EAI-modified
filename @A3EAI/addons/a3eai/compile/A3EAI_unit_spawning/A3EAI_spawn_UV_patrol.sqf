@@ -88,6 +88,11 @@ if (_isAirVehicle) then {
 	_vehicle call A3EAI_addUGVEH;
 };
 
+//data-link
+_vehicle setVehicleReportRemoteTargets true;
+_vehicle setVehicleReceiveRemoteTargets true;
+_vehicle setVehicleReportOwnPosition true;
+
 _unitGroup setBehaviour "AWARE";
 _unitGroup setCombatMode "YELLOW";
 _unitGroup setSpeedMode "NORMAL";

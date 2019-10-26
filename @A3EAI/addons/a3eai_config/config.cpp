@@ -15,7 +15,7 @@ class CfgA3EAISettings {
 	
 	//Enable or disable event logging to the server RPT file (named arma3server_[date]_[time].rpt). Debug level setting. 0: No debug output, 1: Basic Debug output, 2: Detailed Debug output. (Default: 0)
 	//Debug output may help finding additional information about A3EAI's background behavior. This output is helpful when asking for help regarding bugs or unexpected behaviors.
-	debugLevel = 1;
+	debugLevel = 0;
 	
 	//Frequency of server monitor update to RPT log in seconds. The monitor periodically reports number of max/current AI units and dynamically spawned triggers into RPT log. (Default: 300, 0 = Disable reporting)											
 	monitorReportRate = 300;
@@ -120,13 +120,13 @@ class CfgA3EAISettings {
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_village = 1;
-	addAI_village = 3;
+	addAI_village = 2;
 	unitLevel_village = 0;
 	spawnChance_village = 0.25;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_city = 3;
-	addAI_city = 6;
+	addAI_city = 4;
 	unitLevel_city = 1;
 	spawnChance_city = 1.00;
 	
@@ -138,7 +138,7 @@ class CfgA3EAISettings {
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_remoteArea = 1;
-	addAI_remoteArea = 3;
+	addAI_remoteArea = 2;
 	unitLevel_remoteArea = 0;
 	spawnChance_remoteArea = 0.10;
 	
@@ -350,7 +350,7 @@ class CfgA3EAISettings {
 	
 	//Number of infantry AI to paradrop if players are nearby when helicopter is investigating a waypoint, or if helicopter is reinforcing a dynamic AI spawn. Limited by number of cargo seats available in the vehicle. (Default: 3)
 	//Affects: Air vehicle patrols, air reinforcements.
-	paradropAmount = 6;
+	paradropAmount = 5;
 	
 	
 	/*	AI Land Vehicle patrol settings. These AI vehicles will randomly travel between different cities and towns.
@@ -362,7 +362,7 @@ class CfgA3EAISettings {
 
 	
 	//Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-	maxLandPatrols = 6;
+	maxLandPatrols = 4;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 	levelChancesLand[] = {0.90,0.05,0.05,0.00};
@@ -438,11 +438,11 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Global maximum number of active UAV patrols. Set at 0 to disable (Default: 0).	
-	maxUAVPatrols = 3;
+	maxUAVPatrols = 2;
 	
 	//Classnames of UAV types to use, with the maximum amount of each type to spawn.
 	UAVList[] = {
-		{"B_UAV_02_CAS_F",4},
+		{"B_UAV_02_CAS_F",2},
 		{"B_T_UAV_03_F",1},
 		{"B_UAV_05_F",1},
 		{"B_UAV_02_F",1}
@@ -473,7 +473,7 @@ class CfgA3EAISettings {
 		In order for air reinforcements to be deployed, maxAirReinforcements must be greater than zero and the current limit of air reinforcements has not been exceeded.
 	--------------------------------------------------------------------------------------------------------------------*/
 
-	//Global maximum number of active UGV patrols. Set at 0 to disable (Default: 0).	
+	//Global maximum number of active UGV patrols. Set at 0 to disable (Default: 0).
 	maxUGVPatrols = 4;
 	
 	//Classnames of UGV types to use, with the maximum amount of each type to spawn.

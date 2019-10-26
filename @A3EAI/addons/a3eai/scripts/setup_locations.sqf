@@ -55,8 +55,8 @@ for "_i" from 0 to ((count _cfgWorldName) -1) do {
 		if (_isAllowedPos) then {
 			A3EAI_locations pushBack [_placeName,_placePos,_placeType];
 			if (A3EAI_debugLevel > 1) then {diag_log format ["A3EAI Debug: Added location %1 (type: %2, pos: %3) to location list.",_placeName,_placeType,_placePos];};
-			if !((toLower _placeName) in A3EAI_waypointBlacklistAir) then {A3EAI_locationsAir pushBack [_placeName,_placePos,_placeType];diag_log "A3EAI Debug: in A3EAI_locationsAir";};
-			if (!((toLower _placeName) in A3EAI_waypointBlacklistLand) && {!(surfaceIsWater _placePos)}) then {A3EAI_locationsLand pushBack [_placeName,_placePos,_placeType];diag_log "A3EAI Debug: in A3EAI_locationsLand";};
+			if !((toLower _placeName) in A3EAI_waypointBlacklistAir) then {A3EAI_locationsAir pushBack [_placeName,_placePos,_placeType];};
+			if (!((toLower _placeName) in A3EAI_waypointBlacklistLand) && {!(surfaceIsWater _placePos)}) then {A3EAI_locationsLand pushBack [_placeName,_placePos,_placeType];};
 		} else {
 			if (A3EAI_debugLevel > 1) then {diag_log format ["A3EAI Debug: %1 not in allowed position. Blacklist (Air): %2, Blacklist (Land): %3, respawn_west: %4, telepos: %5.",_placeName,!((toLower _placeName) in A3EAI_waypointBlacklistAir),!((toLower _placeName) in A3EAI_waypointBlacklistLand),(_placePos distance2D (getMarkerPos "respawn_west")) > BLACKLIST_AREA_SIZE,({(_x distance2D _placePos) < BLACKLIST_AREA_SIZE} count _telePositions) isEqualTo 0];};
 		};
