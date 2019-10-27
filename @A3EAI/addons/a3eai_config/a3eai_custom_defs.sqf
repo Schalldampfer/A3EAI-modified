@@ -27,7 +27,13 @@ diag_log "[A3EAI] Loading a3eai_cusom_defs.sqf";
 //["AreaName1",[2332.78,13324.5,2.47004],100,2,1,true,600] call A3EAI_createCustomInfantryQueue;
 //["AreaName2",[2332.78,13324.5,2.47004],"VehicleType",100,[1,1],1,true,600] call A3EAI_createCustomVehicleQueue;
 
-
-call compile preprocessFileLineNumbers "A3EAI_config\tanoa\Pillbox.sqf";
-call compile preprocessFileLineNumbers "A3EAI_config\tanoa\SEfort.sqf";
-call compile preprocessFileLineNumbers "A3EAI_config\tanoa\Others.sqf";
+//AI cities
+call compile preprocessFileLineNumbers "A3EAI_config\init_aicity.sqf";
+switch(toLower worldName)do{
+	case "tanoa":{
+		call compile preprocessFileLineNumbers "A3EAI_config\tanoa\Pillbox.sqf";
+		call compile preprocessFileLineNumbers "A3EAI_config\tanoa\SEfort.sqf";
+		call compile preprocessFileLineNumbers "A3EAI_config\tanoa\Others.sqf";
+	};
+	default {};
+};
