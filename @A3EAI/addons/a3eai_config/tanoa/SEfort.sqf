@@ -27,7 +27,7 @@ private ["_grp","_crate_type","_crate_pos","_crate_dirAndUp","_crate_weapons","_
 
 //units
 {
-	[format["%1%2",SEfort,_forEachIndex],_x,10,ceil(random 4) + 2,round(random 2) + 1,true,1800] call A3EAI_createCustomInfantryQueue;
+	[format["%1%2","SEfort",_forEachIndex],_x,10,ceil(random 4) + 2,round(random 2) + 1,true,1800] call A3EAI_createCustomInfantryQueue;
 } forEach [
 	[12055.1,2426.89,0],
 	[12032.9,2465.56,0],
