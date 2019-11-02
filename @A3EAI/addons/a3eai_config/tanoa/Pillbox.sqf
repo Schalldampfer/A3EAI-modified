@@ -5,7 +5,7 @@ diag_log "[AI city] Pillbox spawn points & crates";
 //Pillboxes
 {
 	[format["%1%2",typeOf _x,_forEachIndex],getPos _x,50,ceil(random 3),round(random 2),true,3600] call A3EAI_createCustomInfantryQueue;
-} forEach ([worldSize/2,worldSize/2,0] nearObjects ["BagBunker_base_F",worldSize]);
+} forEach ([worldSize/2,worldSize/2,0] nearObjects ["BagBunker_base_F",worldSize]);//"Cargo_House_base_F"
 
 
 //crate
