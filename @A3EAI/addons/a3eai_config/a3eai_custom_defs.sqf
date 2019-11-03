@@ -35,5 +35,8 @@ switch(toLower worldName)do{
 		call compile preprocessFileLineNumbers "A3EAI_config\tanoa\SEfort.sqf";
 		call compile preprocessFileLineNumbers "A3EAI_config\tanoa\Others.sqf";
 	};
+	case "malden":{
+		call compile preprocessFileLineNumbers "A3EAI_config\malden\Pillbox.sqf";
+	};
 	default {};
 };
