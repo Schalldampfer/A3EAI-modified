@@ -475,8 +475,8 @@ class CfgA3EAISettings {
 	
 	//Classnames of UGV types to use, with the maximum amount of each type to spawn.
 	UGVList[] = {
-		{"B_UGV_01_F",3},
-		{"B_T_UGV_01_olive_F",3},
+		{"B_UGV_01_F",1},
+		{"B_T_UGV_01_olive_F",1},
 		{"B_T_UGV_01_rcws_olive_F",2},
 		{"B_UGV_01_rcws_F",2}
 	};
