@@ -373,9 +373,6 @@ class CfgA3EAISettings {
 	
 	//Classnames of land vehicle types to use, with the maximum amount of each type to spawn.
 	landVehicleList[] = {
-		{"B_APC_Tracked_01_AA_F",1},
-		{"B_MBT_01_TUSK_F",1},
-		{"B_APC_Wheeled_01_cannon_F",1},
 		{"B_G_Offroad_01_armed_EPOCH",1},
 		{"B_LSV_01_armed_F",1},
 		{"B_T_LSV_01_unarmed_F",1},
@@ -438,7 +435,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Global maximum number of active UAV patrols. Set at 0 to disable (Default: 0).	
-	maxUAVPatrols = 2;
+	maxUAVPatrols = 3;
 	
 	//Classnames of UAV types to use, with the maximum amount of each type to spawn.
 	UAVList[] = {
