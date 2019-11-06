@@ -675,8 +675,8 @@ class CfgA3EAISettings {
 	
 	//AI weapon classnames. Note: pistolList, rifleList, machinegunList, sniperList will not be read if generateDynamicWeapons is enabled.
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	pistolList[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F","hgun_Pistol_Signal_F","hgun_P07_khk_F","hgun_Pistol_01_F","ruger_pistol_epoch","1911_pistol_epoch","hgun_PDW2000_F"}; // common
-	rifleList[] = {"a2_fnfal_epoch","a2_bizon_epoch","a2_leeenfield_epoch","Rollins_F","SMG_01_F","SMG_02_F","SMG_03_TR_black","SMG_03C_black","arifle_AKS_F"}; // common+
+	pistolList[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F","hgun_Pistol_Signal_F","hgun_P07_khk_F","hgun_Pistol_01_F","ruger_pistol_epoch","1911_pistol_epoch","hgun_Pistol_tranq_01"}; // common
+	rifleList[] = {"pvcrifle_01_F","nl_Shotgun","nl_auto_xbow","hgun_PDW2000_F","a2_fnfal_epoch","a2_bizon_epoch","a2_leeenfield_epoch","Rollins_F","SMG_01_F","SMG_02_F","SMG_03_TR_black","SMG_03C_black","arifle_AKS_F"}; // common+
 	machinegunList[] = {"l85a2_epoch","m16_EPOCH","M14_EPOCH","m4a3_EPOCH","AKM_EPOCH","a2_G36_C_epoch","a2_mk16_epoch","arifle_Katiba_F","arifle_Katiba_C_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_MXC_F","arifle_MX_F","arifle_MXM_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_AK12_F","arifle_ARX_blk_F","arifle_CTAR_blk_F","arifle_SPAR_01_blk_F"}; // may be in city
 	sniperList[] = {"sr25_epoch","a2_dmr_epoch","a2_svd_epoch","a2_VSS_vintorez_epoch","a2_Mg36_epoch","m249_EPOCH","srifle_DMR_01_F","srifle_EBR_F","srifle_LRR_F","LMG_Mk200_F","LMG_Zafir_F","srifle_DMR_02_F","srifle_DMR_03_F","MMG_01_hex_F","MMG_02_camo_F","arifle_SPAR_02_blk_F"}; //never be in city
 	
