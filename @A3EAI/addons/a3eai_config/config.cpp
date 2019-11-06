@@ -110,7 +110,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/	
 	
 	//Number of online players required for maximum (or minimum) AI spawn chance. Affects Static, Dynamic, Random AI spawns. (Default: 10)	
-	playerCountThreshold = 2;
+	playerCountThreshold = 6;
 	
 	//1: Spawn chance multiplier scales upwards from value defined by chanceScalingThreshold to 1.00. 0: Spawn chance multiplier scales downwards from 1.00 to chanceScalingThreshold.
 	upwardsChanceScaling = 0;
@@ -140,7 +140,7 @@ class CfgA3EAISettings {
 	minAI_remoteArea = 1;
 	addAI_remoteArea = 2;
 	unitLevel_remoteArea = 0;
-	spawnChance_remoteArea = 0.10;
+	spawnChance_remoteArea = 0.25;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_wilderness = 1;
@@ -152,7 +152,7 @@ class CfgA3EAISettings {
 	tempBlacklistTime = 1800;
 	
 	//If enabled, AI group will attempt to track down player responsible for killing a group member. (Default: 1)
-	enableFindKiller = 1;
+	enableFindKiller = 0;
 	
 	//If normal probability check for spawning NVGs fails, then give AI temporary NVGs during night hours. Temporary NVGs are unlootable and will be removed at death (Default: 0).									
 	enableTempNVGs = 0;
@@ -174,13 +174,13 @@ class CfgA3EAISettings {
 	
 	//If enabled, A3EAI will remove all explosive ammo (missiles, rockets, bombs - but not HE rounds) from spawned AI air vehicles.  (Default: 1)
 	//Affects: All AI air vehicle types (patrols/custom/reinforcement). Does not affect UAV/UGVs.
-	removeExplosiveAmmo = 1;
+	removeExplosiveAmmo = 0;
 	
 	//if enabled, AI units suffer no damage from vehicle collisions. (Default: 1)
 	noCollisionDamage = 0;
 	
 	//If enabled, AI killed by vehicle collisions will have their gear removed (Default: 1)
-	roadKillPenalty = 1;
+	roadKillPenalty = 0;
 	
 		
 	/*	Static Infantry AI Spawning Settings
@@ -233,7 +233,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/		
 
 	//Maximum number of placed random spawns on map. Set to -1 for A3EAI to automatically adjust spawn limit according to map size. Set to 0 to disable random spawns. (Default: -1)
-	maxRandomSpawns = -1;
+	maxRandomSpawns = 0;
 	
 	//Time to wait (seconds) before despawning all AI units in random spawn area when no players are present. (Default: 120)
 	despawnRandomSpawnTime = 600;
@@ -327,9 +327,9 @@ class CfgA3EAISettings {
 	
 	//Classnames of air vehicle types to use, with the maximum amount of each type to spawn.
 	airVehicleList[] = {
-		{"B_Plane_Fighter_01_Stealth_F",1},
-		{"B_T_VTOL_01_infantry_olive_F",1},
-		{"B_Heli_Transport_03_unarmed_green_F",1}
+		{"B_Plane_Fighter_01_Cluster_F",1},
+		{"B_T_VTOL_01_infantry_F",1},
+		{"B_Heli_Transport_03_unarmed_F",1}
 	};
 	
 	//Maximum number of gunner units per air vehicle. Limited by actual number of available gunner positions. (Default: 2)
@@ -338,7 +338,7 @@ class CfgA3EAISettings {
 	
 	//Probability of AI helicopter sucessfully detecting player if there is line-of-sight. AI helicopters will conduct a visual sweep upon arriving at each waypoint and some distance after leaving. (Default: 0.80)
 	//Affects: All AI air vehicle patrols, including custom and reinforcement.
-	airDetectChance = 0.80;
+	airDetectChance = 0.50;
 	
 	//Probability of AI to deploy infantry units by parachute if players are nearby when helicopter is investigating a waypoint. (Default: 0.50)
 	//Affects: Air vehicle patrols.
@@ -401,7 +401,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Maximum allowed number of simultaneous active reinforcements (Default: 5)
-	maxAirReinforcements = 1;
+	maxAirReinforcements = 2;
 	
 	//Air vehicles to use as reinforcement vehicles. Default: {"B_Heli_Transport_01_F","B_Heli_Light_01_armed_F"}
 	//Armed air vehicles will detect and engage players within reinforcement area. Unarmed air vehicles will deploy an AI paradrop group.
@@ -459,7 +459,7 @@ class CfgA3EAISettings {
 	UAVCallReinforceCooldown = 1800;
 	
 	//Probability to successfully detect player if there is line-of-sight. If at least one player is detected, air reinforcements will be summoned to the area. (Default: 0.50)
-	UAVDetectChance = 0.75;
+	UAVDetectChance = 0.85;
 	
 	
 	/*	UGV Patrol Settings
@@ -495,7 +495,7 @@ class CfgA3EAISettings {
 	UGVCallReinforceCooldown = 3600;
 	
 	//Probability to successfully detect player if there is line-of-sight. If at least one player is detected, air reinforcements will be summoned to the area. (Default: 0.50)
-	UGVDetectChance = 0.65;
+	UGVDetectChance = 0.55;
 	
 	
 	/*
@@ -738,9 +738,9 @@ class CfgA3EAISettings {
 		{"binocular",0.50},{"NVG_EPOCH",0.10}
 	};
 	gadgetsList2[] = {
-		{"binocular",0.70},{"NVG_EPOCH",0.20}
+		{"binocular",0.70},{"NVG_EPOCH",0.20},{"radiation_mask_epoch",0.05}
 	};
 	gadgetsList3[] = { 
-		{"binocular",0.90},{"NVG_EPOCH",0.30}
+		{"binocular",0.90},{"NVG_EPOCH",0.30},{"radiation_mask_epoch",0.05}
 	};
 };
