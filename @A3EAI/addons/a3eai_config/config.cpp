@@ -366,7 +366,7 @@ class CfgA3EAISettings {
 
 	
 	//Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-	maxLandPatrols = 4;
+	maxLandPatrols = 3;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 	levelChancesLand[] = {0.90,0.05,0.05,0.00};
@@ -438,8 +438,8 @@ class CfgA3EAISettings {
 		In order for air reinforcements to be deployed, maxAirReinforcements must be greater than zero and the current limit of air reinforcements has not been exceeded.
 	--------------------------------------------------------------------------------------------------------------------*/
 
-	//Global maximum number of active UAV patrols. Set at 0 to disable (Default: 0).	
-	maxUAVPatrols = 3;
+	//Global maximum number of active UAV patrols. Set at 0 to disable (Default: 0).
+	maxUAVPatrols = 2;
 	
 	//Classnames of UAV types to use, with the maximum amount of each type to spawn.
 	UAVList[] = {
@@ -475,7 +475,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Global maximum number of active UGV patrols. Set at 0 to disable (Default: 0).
-	maxUGVPatrols = 4;
+	maxUGVPatrols = 3;
 	
 	//Classnames of UGV types to use, with the maximum amount of each type to spawn.
 	UGVList[] = {
