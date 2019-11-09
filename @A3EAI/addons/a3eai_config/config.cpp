@@ -203,7 +203,7 @@ class CfgA3EAISettings {
 	respawnLimit_village = 1;
 	respawnLimit_city = -1;
 	respawnLimit_capitalCity = -1;
-	respawnLimit_remoteArea = 0;
+	respawnLimit_remoteArea = 1;
 
 	
 	/*	Dynamic Infantry AI Spawning Settings. Probabilities should add up to 1.00	
