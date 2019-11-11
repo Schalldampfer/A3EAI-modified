@@ -119,13 +119,13 @@ class CfgA3EAISettings {
 	chanceScalingThreshold = 0.5;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
-	minAI_village = 1;
-	addAI_village = 2;
+	minAI_village = 2;
+	addAI_village = 4;
 	unitLevel_village = 0;
-	spawnChance_village = 0.25;
+	spawnChance_village = 0.50;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
-	minAI_city = 3;
+	minAI_city = 4;
 	addAI_city = 4;
 	unitLevel_city = 1;
 	spawnChance_city = 1.00;
@@ -140,7 +140,7 @@ class CfgA3EAISettings {
 	minAI_remoteArea = 1;
 	addAI_remoteArea = 2;
 	unitLevel_remoteArea = 0;
-	spawnChance_remoteArea = 0.25;
+	spawnChance_remoteArea = 0.15;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_wilderness = 1;
