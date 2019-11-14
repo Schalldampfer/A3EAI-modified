@@ -18,7 +18,7 @@ _num_items = 2;
 	_type = _x;
 	{
 		//AI
-		[format["%1%2",_type,_forEachIndex],getPos _x,50,ceil(random 3),round(random 2),true,3600] call A3EAI_createCustomInfantryQueue;
+		[format["%1%2",_type,_forEachIndex],getPos _x,50,round(random 4) + 2,round(random 2),true,3600] call A3EAI_createCustomInfantryQueue;
 		//Crate
 		_poss = [_x] call BIS_fnc_buildingPositions;
 		if ((count _poss > 0) && (random 1 > 0.5)) then {
@@ -26,4 +26,29 @@ _num_items = 2;
 		};
 	} forEach ([worldSize/2,worldSize/2,0] nearObjects [_type,worldSize]);
 } forEach ["Land_Bunker_01_HQ_F","Land_Bunker_01_small_F","Land_Bunker_01_tall_F","Land_Bunker_01_big_F"];//"Cargo_House_base_F"
+
+
+//crate
+_num_weapons = 3;
+_num_magazines = 8;
+_num_items = 4;
+
+["Box_Syndicate_Ammo_F", [6237.35,10781.1,131.281], [[0.391608,-0.92013,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
+["Box_Syndicate_Wps_F", [5876.09,10791.8,115.652], [[0.999909,0.013505,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
+["Box_Syndicate_WpsLaunch_F", [6304.21,10704.7,112.492], [[0.705498,0.708712,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
+
+//Static Weapons
+[
+	//Trader
+	[["B_Radar_System_01_F",[5548.41,7912.73,0],[],0,"CAN_COLLIDE"], [[0.763111,-0.646266,-0.00149637],[0.0303859,0.0335666,0.998974]]],
+	//North
+	[["I_HMG_01_A_F",[6238.41,10778.2,20.4844],[],0,"FLY"], [[-0.431063,-0.902322,0],[0,0,1]]],
+	[["I_HMG_01_A_F",[5918.24,10728.9,0],[],0,"CAN_COLLIDE"], [[0.0168475,0.999858,0],[0,0,1]]],
+	[["I_E_Radar_System_01_F",[7137.29,12231.5,0],[],0,"CAN_COLLIDE"], [[0.0394039,0.997611,0.0567503],[-0.0223958,-0.0558984,0.998185]]],
+	[["I_E_SAM_System_03_F",[6272.07,10839.8,0],[],0,"CAN_COLLIDE"], [[0.470723,0.881945,0.0243571],[0.0112037,-0.03358,0.999373]]]
+] call AIcity_spawn_autoStatic;
+
+//Additional AIs
+["A3EAI_North_1",[6341.47,10733.4,0],50,round(random 3)+3,round(random 2)+1,false] call A3EAI_createCustomInfantryQueue;
+["A3EAI_North_2",[6093.38,10761.8,0],50,round(random 3)+3,round(random 2)+1,false] call A3EAI_createCustomInfantryQueue;
 
