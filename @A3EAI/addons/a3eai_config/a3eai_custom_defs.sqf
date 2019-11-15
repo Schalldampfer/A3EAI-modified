@@ -37,6 +37,7 @@ switch(toLower worldName)do{
 	};
 	case "malden":{
 		call compile preprocessFileLineNumbers "A3EAI_config\malden\Pillbox.sqf";
+		call compile preprocessFileLineNumbers "A3EAI_config\malden\TreasureHunting.sqf";
 	};
 	default {};
 };
