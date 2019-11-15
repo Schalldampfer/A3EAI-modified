@@ -122,7 +122,7 @@ class CfgA3EAISettings {
 	minAI_village = 2;
 	addAI_village = 4;
 	unitLevel_village = 0;
-	spawnChance_village = 0.50;
+	spawnChance_village = 0.75;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_city = 4;
