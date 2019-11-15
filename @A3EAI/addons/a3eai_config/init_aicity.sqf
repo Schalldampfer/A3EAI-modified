@@ -127,6 +127,47 @@ AIcity_spawn_mine = {
 	_mine
 };
 
+AIcity_marker = {
+	private["_mName","_mShape","_mType","_mColor","_mAlpha","_mSize","_mDir","_mText","_marker"];
+	params [ 
+		["_mPos",[0,0,0]],
+		["_mShape","ICON"],
+		["_mType","hd_dot"],
+		["_mColor","ColorBlack"],
+		["_mAlpha",1],
+		["_mSize",[0.8,0.8]],
+		["_mDir",0],
+		["_mText",""]
+	];
+
+	if(isNil {Epoch_markerCounterGlobal})then{Epoch_markerCounterGlobal = 0};
+
+	_mName = format["EPOCH_globalMarker_%1", Epoch_markerCounterGlobal];
+	_marker = createMarker [_mName, _mPos];
+	_mName setMarkerShape _mShape;
+	if!(_mShape isEqualTo "ICON")then{
+		if!(_mType in (getArray(_config >> "brushes")))exitWith{
+			diag_log "AIcity: createGlobalMarkerSet -5- Shape is Ellipse or Rectangle and needs a Brush Type";
+		};
+	};
+	_mName setMarkerType _mType; 
+	_mName setMarkerAlpha _mAlpha;
+	_mName setMarkerSize _mSize;
+	_mName setMarkerDir _mDir;
+	
+	if!(_mText isEqualTo "")then{
+		_mName setMarkerText _mText;
+	};
+	
+	if!(_mColor isEqualTo "")then{
+		_mName setMarkerColor _mColor
+	};
+
+	missionNameSpace setVariable[_mName, _mSize, true];
+	Epoch_markerCounterGlobal = Epoch_markerCounterGlobal + 1;
+	_marker
+};
+
 //monitor
 [] spawn {
 	while {true} do{
