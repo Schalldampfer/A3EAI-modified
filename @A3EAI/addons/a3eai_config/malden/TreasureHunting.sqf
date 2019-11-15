@@ -15,7 +15,7 @@ _Crypto = [200,1000];
 diag_log "[Treasure Hunting] Loading...";
 
 //Marker
-[_center,["ELLIPSE"],["Solid"],["ColorBlue"],[0.25],[[_radius,_radius]],[0],["Treasure Hunting"]] call AIcity_marker;
+[_center,"ELLIPSE","Solid","ColorBlue",0.3,[_radius,_radius],0,"Treasure Hunting"] call AIcity_marker;
 
 //Spawn veins and mass graves
 {
