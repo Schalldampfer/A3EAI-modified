@@ -54,16 +54,20 @@ _num_items = 4;
 ["A3EAI_North_1",[6341.47,10733.4,0],50,round(random 3)+3,round(random 2)+1,false] call A3EAI_createCustomInfantryQueue;
 ["A3EAI_North_2",[6093.38,10761.8,0],50,round(random 3)+3,round(random 2)+1,false] call A3EAI_createCustomInfantryQueue;
 
-createMine ["ATMine",[5765.65,10752.7,0],[],0];
-createMine ["ATMine",[5846.91,10812.5,0],[],0];
-createMine ["ATMine",[5880.80,10834.3,0],[],0];
-createMine ["ATMine",[6331.28,10691.8,0],[],0];
-createMine ["ATMine",[6240.82,10746.4,0],[],0];
-createMine ["ATMine",[6206.53,10765.0,0],[],0];
-createMine ["ATMine",[6249.13,10806.0,0],[],0];
-createMine ["ATMine",[6202.31,10794.8,0],[],0];
-createMine ["ATMine",[6276.14,10703.4,0],[],0];
-createMine ["ATMine",[6302.85,10745.6,0],[],0];
+{
+	["ATMine",_x] call AIcity_spawn_mine;
+} forEach [
+	[5765.65,10752.7,0],
+	[5846.91,10812.5,0],
+	[5880.80,10834.3,0],
+	[6331.28,10691.8,0],
+	[6240.82,10746.4,0],
+	[6206.53,10765.0,0],
+	[6249.13,10806.0,0],
+	[6202.31,10794.8,0],
+	[6276.14,10703.4,0],
+	[6302.85,10745.6,0]
+];
 
 _mine = createMine ["APERSMineDispenser_Mine_F",[5879.13,10783.3,0],[],0];
 _mine setVectorDirAndUp [[0.942806,0.329627,0.0496252],[-0.0503351,-0.0063863,0.998712]];
