@@ -320,7 +320,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/		
 
 	//Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
-	maxAirPatrols = 1;
+	maxAirPatrols = 0;
 	
 	//Probability of spawning Level 0/1/2/3 AI air vehicle patrol spawns. Probabilities should add up to 1.00		
 	levelChancesAir[] = {0.80,0.20,0.0,0.0};
@@ -366,7 +366,7 @@ class CfgA3EAISettings {
 
 	
 	//Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-	maxLandPatrols = 3;
+	maxLandPatrols = 6;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 	levelChancesLand[] = {0.90,0.05,0.05,0.00};
@@ -439,7 +439,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Global maximum number of active UAV patrols. Set at 0 to disable (Default: 0).
-	maxUAVPatrols = 2;
+	maxUAVPatrols = 3;
 	
 	//Classnames of UAV types to use, with the maximum amount of each type to spawn.
 	UAVList[] = {
@@ -496,7 +496,7 @@ class CfgA3EAISettings {
 	detectOnlyUGVs = 0;
 	
 	//Cooldown required in between air reinforcement summons when detecting players. Value in seconds. (Default: 1800)
-	UGVCallReinforceCooldown = 3600;
+	UGVCallReinforceCooldown = 1800;
 	
 	//Probability to successfully detect player if there is line-of-sight. If at least one player is detected, air reinforcements will be summoned to the area. (Default: 0.50)
 	UGVDetectChance = 0.55;
@@ -522,7 +522,7 @@ class CfgA3EAISettings {
 		{"aimingAccuracy",0.01,0.05},
 		{"aimingShake",0.10,0.15},
 		{"aimingSpeed",0.10,0.30},
-		{"spotDistance",0.10,0.30},
+		{"spotDistance",0.20,0.50},
 		{"spotTime",0.15,0.35},
 		{"courage",0.20,0.80},
 		{"reloadSpeed",0.10,0.50},
