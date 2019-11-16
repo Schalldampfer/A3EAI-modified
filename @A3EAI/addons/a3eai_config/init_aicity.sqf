@@ -146,7 +146,7 @@ AIcity_marker = {
 	_marker = createMarker [_mName, _mPos];
 	_mName setMarkerShape _mShape;
 	if!(_mShape isEqualTo "ICON")then{
-		if!(_mType in (getArray(_config >> "brushes")))exitWith{
+		if!(_mType in (getArray('CfgMarkerSets' call EPOCH_returnConfig >> "brushes")))exitWith{
 			diag_log "AIcity: createGlobalMarkerSet -5- Shape is Ellipse or Rectangle and needs a Brush Type";
 		};
 	};
