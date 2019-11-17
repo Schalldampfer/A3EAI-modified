@@ -140,9 +140,9 @@ AIcity_marker = {
 		["_mText",""]
 	];
 
-	if(isNil {Epoch_markerCounterGlobal})then{Epoch_markerCounterGlobal = 0};
+	if(isNil {AEpoch_markerCounterGlobal})then{AEpoch_markerCounterGlobal = 0};
 
-	_mName = format["EPOCH_globalMarker_%1", Epoch_markerCounterGlobal];
+	_mName = format["AEPOCH_globalMarker_%1", AEpoch_markerCounterGlobal];
 	_marker = createMarker [_mName, _mPos];
 	_mName setMarkerShape _mShape;
 	if!(_mShape isEqualTo "ICON")then{
@@ -163,8 +163,8 @@ AIcity_marker = {
 		_mName setMarkerColor _mColor
 	};
 
-	missionNameSpace setVariable[_mName, _mSize, true];
-	Epoch_markerCounterGlobal = Epoch_markerCounterGlobal + 1;
+	//missionNameSpace setVariable[_mName, _mSize, true];
+	AEpoch_markerCounterGlobal = AEpoch_markerCounterGlobal + 1;
 	_marker
 };
 
