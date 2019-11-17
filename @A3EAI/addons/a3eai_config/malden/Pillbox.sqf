@@ -22,7 +22,7 @@ _num_items = 2;
 		//Crate
 		_poss = [_x] call BIS_fnc_buildingPositions;
 		if ((count _poss > 0) && (random 1 > 0.5)) then {
-			[_crate_type, selectRandom ([_x] call BIS_fnc_buildingPositions) , [[random 1,random 1,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
+			[_crate_type, selectRandom _poss , [[random 1,random 1,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
 		};
 	} forEach ([worldSize/2,worldSize/2,0] nearObjects [_type,worldSize]);
 } forEach ["Land_Bunker_01_HQ_F","Land_Bunker_01_small_F","Land_Bunker_01_tall_F","Land_Bunker_01_big_F"];//"Cargo_House_base_F"
