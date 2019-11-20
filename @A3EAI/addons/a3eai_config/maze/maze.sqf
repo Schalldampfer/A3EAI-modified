@@ -155,7 +155,7 @@ for "_i" from 1 to (_mazeWidth max _mazeHeight) do {
 	_mazeBot_x = floor(random (_mazeWidth - 2)) + 1;
 	_mazeBot_y = floor(random (_mazeHeight - 2)) + 1;
 	_position = [(_startPosition select 0) + _mazeBot_x * 2 * _halfMetalFloorSize, (_startPosition select 1) + _mazeBot_y * 2 * _halfMetalFloorSize, 0.2];
-	_unit = [_position,_mazeBotGroup,"red",[],format["H_%1_EPOCH",62 + round(random 7)],format["V_%1",ceil(random 5)],"","none", blck_Pistols, [], false] call blck_fnc_spawnUnit;
+	_unit = [_position,_mazeBotGroup,"red",[],[format["H_%1_EPOCH",62 + round(random 7)]],[format["V_%1",ceil(random 5)]],["B_Parachute"],"none", blck_Pistols, [], false] call blck_fnc_spawnUnit;
 	_unit setPos _position;
 	_unit forceSpeed 0;
 	doStop _unit;
