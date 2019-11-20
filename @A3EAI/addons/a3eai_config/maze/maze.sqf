@@ -22,9 +22,10 @@ _mazeHeight = 16;
 
 _startPosition = _this;
 
-waitUntil {!isNil "blck_pvs_version"};
 diag_log format["[Maze] StartPos %1",_startPosition];
+waitUntil {!isNil "blck_pvs_version"};
 
+diag_log "[Maze] Start generator";
 _t1 = diag_tickTime;
 _maze = [_mazeWidth,_mazeHeight] call compile preprocessFileLineNumbers "A3EAI_config\maze\mazegen.sqf";
 diag_log format["[Maze]: creating Maze of size %1 x %2 took %3 ms", _mazeWidth, _mazeHeight, (diag_tickTime - _t1)];
