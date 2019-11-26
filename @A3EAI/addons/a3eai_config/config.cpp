@@ -122,10 +122,10 @@ class CfgA3EAISettings {
 	minAI_village = 2;
 	addAI_village = 4;
 	unitLevel_village = 0;
-	spawnChance_village = 0.75;
+	spawnChance_village = 1.00;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
-	minAI_city = 4;
+	minAI_city = 6;
 	addAI_city = 4;
 	unitLevel_city = 1;
 	spawnChance_city = 1.00;
@@ -158,13 +158,13 @@ class CfgA3EAISettings {
 	enableTempNVGs = 0;
 	
 	//Minimum AI unit level requirement to use underslung grenade launchers. Set to -1 to disable completely. (Default: 1)
-	levelRequiredGL = 2;
+	levelRequiredGL = 1;
 	
 	//Minimum AI unit level requirement to use launcher weapons. Set to -1 to disable completely. Launchers are unlootable and will be removed at death (Default: -1)
-	levelRequiredLauncher = 3;
+	levelRequiredLauncher = 2;
 	
 	//List of launcher-type weapons that AI can use.
-	launcherTypes[] = {"launch_NLAW_F","launch_Titan_short_F","launch_Titan_F"}; 
+	launcherTypes[] = {"launch_MRAWS_olive_F","launch_RPG32_F","launch_RPG7_F","launch_Titan_F"}; 
 	
 	//Maximum number of launcher weapons allowed per group (Default: 1)
 	launchersPerGroup = 3;
@@ -681,8 +681,8 @@ class CfgA3EAISettings {
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	pistolList[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F","hgun_Pistol_Signal_F","hgun_P07_khk_F","hgun_Pistol_01_F","ruger_pistol_epoch","1911_pistol_epoch","hgun_Pistol_tranq_01"}; // common
 	rifleList[] = {"pvcrifle_01_F","nl_Shotgun","nl_auto_xbow","hgun_PDW2000_F","a2_fnfal_epoch","a2_bizon_epoch","a2_leeenfield_epoch","Rollins_F","SMG_01_F","SMG_02_F","SMG_03_TR_black","SMG_03C_black","arifle_AKS_F"}; // common+
-	machinegunList[] = {"l85a2_epoch","m16_EPOCH","M14_EPOCH","m4a3_EPOCH","AKM_EPOCH","a2_G36_C_epoch","a2_mk16_epoch","arifle_Katiba_F","arifle_Katiba_C_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_MXC_F","arifle_MX_F","arifle_MXM_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_AK12_F","arifle_ARX_blk_F","arifle_CTAR_blk_F","arifle_SPAR_01_blk_F"}; // may be in city
-	sniperList[] = {"sr25_epoch","a2_dmr_epoch","a2_svd_epoch","a2_VSS_vintorez_epoch","a2_Mg36_epoch","m249_EPOCH","srifle_DMR_01_F","srifle_EBR_F","srifle_LRR_F","LMG_Mk200_F","LMG_Zafir_F","srifle_DMR_02_F","srifle_DMR_03_F","MMG_01_hex_F","MMG_02_camo_F","arifle_SPAR_02_blk_F"}; //never be in city
+	machinegunList[] = {"a2_aks74un_EPOCH","l85a2_epoch","m16_EPOCH","M14_EPOCH","m4a3_EPOCH","AKM_EPOCH","a2_G36_C_epoch","a2_mk16_epoch","arifle_Katiba_F","arifle_Katiba_C_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_MXC_F","arifle_MX_F","arifle_MXM_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_AK12_F","arifle_ARX_blk_F","arifle_CTAR_blk_F","arifle_SPAR_01_blk_F"}; // may be in city
+	sniperList[] = {"a2_ak47s_gold_EPOCH","l85a2_ugl_epoch","a2_mk17_epoch","a2_AK107_EPOCH","sr25_epoch","a2_dmr_epoch","a2_svd_epoch","a2_VSS_vintorez_epoch","a2_Mg36_epoch","m249_EPOCH","srifle_DMR_01_F","srifle_EBR_F","srifle_LRR_F","LMG_Mk200_F","LMG_Zafir_F","srifle_DMR_02_F","srifle_DMR_03_F","MMG_01_hex_F","MMG_02_camo_F","arifle_SPAR_02_blk_F"}; //never be in city
 	
 	//AI weapon scope attachment settings. Note: weaponOpticsList will not be read if generateDynamicOptics is enabled.
 	weaponOpticsList[] = {"optic_MRCO","optic_Arco","optic_Aco","optic_ACO_grn","optic_Aco_smg","optic_ACO_grn_smg","optic_Holosight","optic_Holosight_smg","optic_MRD","optic_Yorris","Elcan_epoch","Elcan_reflex_epoch"};
@@ -726,10 +726,10 @@ class CfgA3EAISettings {
 		{"ItemWatch",0.60},{"ItemCompass",0.50},{"ItemMap",0.50},{"ItemGPS",0.00},{"EpochRadio0",0.10}
 	};
 	toolsList2[] = {
-		{"ItemWatch",0.90},{"ItemCompass",0.70},{"ItemMap",0.70},{"ItemGPS",0.01},{"EpochRadio0",0.20},{"ItemGeigerCounter_EPOCH",0.05}
+		{"ItemWatch",0.90},{"ItemCompass",0.70},{"ItemMap",0.70},{"ItemGPS",0.01},{"EpochRadio0",0.20},{"ItemGeigerCounter_EPOCH",0.05},{"MineDetector",0.001}
 	};
 	toolsList3[] = {
-		{"ItemWatch",0.90},{"ItemCompass",0.90},{"ItemMap",0.90},{"ItemGPS",0.30},{"EpochRadio0",0.30},{"ItemGeigerCounter_EPOCH",0.05}
+		{"ItemWatch",0.90},{"ItemCompass",0.90},{"ItemMap",0.90},{"ItemGPS",0.30},{"EpochRadio0",0.30},{"ItemGeigerCounter_EPOCH",0.05},{"MineDetector",0.001}
 	};
 	
 	
