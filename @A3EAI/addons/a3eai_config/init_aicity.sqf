@@ -78,7 +78,7 @@ AIcity_spawn_crate = {
 	_crate = _type createVehicle _pos;
 	
 	//initialize
-	_crate setVariable ["LAST_CHECK", 100000];
+	_crate setVariable ["LAST_CHECK", 100000 + diag_tickTime, true];
 	_crate allowDamage false;
 	_crate enableRopeAttach false;
 	
