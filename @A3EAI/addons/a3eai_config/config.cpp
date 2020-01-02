@@ -574,8 +574,8 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Probabilities to equip uniform, according to AI level.
-	addUniformChance0 = 0.5;
-	addUniformChance1 = 0.8;
+	addUniformChance0 = 0.75;
+	addUniformChance1 = 0.95;
 	addUniformChance2 = 1.00;
 	addUniformChance3 = 1.00;
 	
