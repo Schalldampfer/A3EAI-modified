@@ -28,6 +28,7 @@ diag_log "[A3EAI] Loading a3eai_cusom_defs.sqf";
 //["AreaName2",[2332.78,13324.5,2.47004],"VehicleType",100,[1,1],1,true,600] call A3EAI_createCustomVehicleQueue;
 
 //AI cities
+waitUntil {!isNil "EPOCH_server_setVToken"};
 call compile preprocessFileLineNumbers "A3EAI_config\init_aicity.sqf";
 switch(toLower worldName)do{
 	case "tanoa":{
