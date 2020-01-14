@@ -1,3 +1,4 @@
+/*
 #include "\A3EAI\globaldefines.hpp"
 
 private ["_object"];
@@ -15,5 +16,6 @@ _object addEventHandler ["GetIn",{
 _object setVehicleLock "LOCKEDPLAYER";
 _object enableCopilot false;
 _object enableRopeAttach false;
+*/
 
 true

@@ -109,7 +109,7 @@ while {true} do {
 													_x call _fnc_purgeAndDelete;
 												};
 											} forEach (crew _x);
-											_x call _fnc_purgeAndDelete;
+											//_x call _fnc_purgeAndDelete;
 										};
 									};
 								};
