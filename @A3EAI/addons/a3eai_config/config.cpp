@@ -140,13 +140,13 @@ class CfgA3EAISettings {
 	minAI_remoteArea = 1;
 	addAI_remoteArea = 2;
 	unitLevel_remoteArea = 0;
-	spawnChance_remoteArea = 0.15;
+	spawnChance_remoteArea = 0.50;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_wilderness = 1;
 	addAI_wilderness = 2;
 	unitLevel_wilderness = 0;
-	spawnChance_wilderness = 0.10;
+	spawnChance_wilderness = 0.00;
 	
 	//(For dynamic and random spawns only) Defines amount of time to wait in seconds until cleaning up temporary blacklist area after dynamic/random spawn is deactivated (Default: 1200)
 	tempBlacklistTime = 1800;
@@ -164,7 +164,8 @@ class CfgA3EAISettings {
 	levelRequiredLauncher = 2;
 	
 	//List of launcher-type weapons that AI can use.
-	launcherTypes[] = {"launch_MRAWS_olive_F","launch_RPG32_F","launch_RPG7_F","launch_Titan_F"}; 
+	//launcherTypes[] = {"launch_MRAWS_olive_F","launch_RPG32_F","launch_RPG7_F","launch_Titan_F"}; 
+	launcherTypes[] = {"CUP_launch_M72A6_Loaded","CUP_launch_RPG18_Loaded","CUP_launch_RPG7V","CUP_launch_9K32Strela"};
 	
 	//Maximum number of launcher weapons allowed per group (Default: 1)
 	launchersPerGroup = 3;
@@ -679,13 +680,18 @@ class CfgA3EAISettings {
 	
 	//AI weapon classnames. Note: pistolList, rifleList, machinegunList, sniperList will not be read if generateDynamicWeapons is enabled.
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	pistolList[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F","hgun_Pistol_Signal_F","hgun_P07_khk_F","hgun_Pistol_01_F","ruger_pistol_epoch","1911_pistol_epoch","hgun_Pistol_tranq_01"}; // common
-	rifleList[] = {"pvcrifle_01_F","nl_Shotgun","nl_auto_xbow","hgun_PDW2000_F","a2_fnfal_epoch","a2_bizon_epoch","a2_leeenfield_epoch","Rollins_F","SMG_01_F","SMG_02_F","SMG_03_TR_black","SMG_03C_black","arifle_AKS_F"}; // common+
-	machinegunList[] = {"a2_aks74un_EPOCH","l85a2_epoch","m16_EPOCH","M14_EPOCH","m4a3_EPOCH","AKM_EPOCH","a2_G36_C_epoch","a2_mk16_epoch","arifle_Katiba_F","arifle_Katiba_C_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_MXC_F","arifle_MX_F","arifle_MXM_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_AK12_F","arifle_ARX_blk_F","arifle_CTAR_blk_F","arifle_SPAR_01_blk_F"}; // may be in city
-	sniperList[] = {"a2_ak47s_gold_EPOCH","l85a2_ugl_epoch","a2_mk17_epoch","a2_AK107_EPOCH","sr25_epoch","a2_dmr_epoch","a2_svd_epoch","a2_VSS_vintorez_epoch","a2_Mg36_epoch","m249_EPOCH","srifle_DMR_01_F","srifle_EBR_F","srifle_LRR_F","LMG_Mk200_F","LMG_Zafir_F","srifle_DMR_02_F","srifle_DMR_03_F","MMG_01_hex_F","MMG_02_camo_F","arifle_SPAR_02_blk_F"}; //never be in city
+	//pistolList[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F","hgun_Pistol_Signal_F","hgun_P07_khk_F","hgun_Pistol_01_F","ruger_pistol_epoch","1911_pistol_epoch","hgun_Pistol_tranq_01"}; // common
+	//rifleList[] = {"pvcrifle_01_F","nl_Shotgun","nl_auto_xbow","hgun_PDW2000_F","a2_fnfal_epoch","a2_bizon_epoch","a2_leeenfield_epoch","Rollins_F","SMG_01_F","SMG_02_F","SMG_03_TR_black","SMG_03C_black","arifle_AKS_F"}; // common+
+	//machinegunList[] = {"a2_aks74un_EPOCH","l85a2_epoch","m16_EPOCH","M14_EPOCH","m4a3_EPOCH","AKM_EPOCH","a2_G36_C_epoch","a2_mk16_epoch","arifle_Katiba_F","arifle_Katiba_C_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_MXC_F","arifle_MX_F","arifle_MXM_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_AK12_F","arifle_ARX_blk_F","arifle_CTAR_blk_F","arifle_SPAR_01_blk_F"}; // may be in city
+	//sniperList[] = {"a2_ak47s_gold_EPOCH","l85a2_ugl_epoch","a2_mk17_epoch","a2_AK107_EPOCH","sr25_epoch","a2_dmr_epoch","a2_svd_epoch","a2_VSS_vintorez_epoch","a2_Mg36_epoch","m249_EPOCH","srifle_DMR_01_F","srifle_EBR_F","srifle_LRR_F","LMG_Mk200_F","LMG_Zafir_F","srifle_DMR_02_F","srifle_DMR_03_F","MMG_01_hex_F","MMG_02_camo_F","arifle_SPAR_02_blk_F"}; //never be in city
+	pistolList[] = {"hgun_Pistol_Signal_F","CUP_hgun_Compact","CUP_hgun_Duty","CUP_hgun_Phantom","CUP_hgun_Glock17","CUP_hgun_Glock17_blk","CUP_hgun_Glock17_tan","CUP_hgun_M9","CUP_hgun_Makarov","CUP_hgun_PMM","CUP_hgun_PB6P9","CUP_hgun_TaurusTracker455","CUP_hgun_Colt1911","CUP_hgun_Deagle","CUP_hgun_SA61","CUP_hgun_MicroUzi"}; // common
+	rifleList[] = {"CUP_srifle_LeeEnfield","CUP_srifle_LeeEnfield_rail","CUP_srifle_CZ550_rail","CUP_smg_MP5A5","CUP_smg_MP5A5_flashlight","CUP_sgun_Saiga12K","CUP_arifle_AKS74U","CUP_arifle_SAIGA_MK03_top_rail","CUP_arifle_SIAGE_MK03_Wood_top_rail","CUP_arifle_TYPE_56_2_Early","CUP_smg_bizon","CUP_smg_vityaz","CUP_smg_saiga9","CUP_smg_EVO","CUP_arifle_G36C","CUP_sgun_CZ584","CUP_sgun_M1014","CUP_arifle_M16A1"}; // common+
+	machinegunList[] = {"CUP_hgun_BallisticShield_Armed","CUP_sgun_AA12","CUP_arifle_AUG_A1","CUP_arifle_AKM","CUP_arifle_AKMS","CUP_arifle_AK47","CUP_arifle_AK74","CUP_arifle_AKS74","CUP_arifle_AK74M","CUP_arifle_AK74M_camo","CUP_arifle_AK74M_top_rail","CUP_arifle_AK107","CUP_arifle_CZ805_A1","CUP_arifle_CZ805_A2","CUP_arifle_FNFAL_railed","CUP_arifle_FNFAL_OSW","CUP_arifle_G36A_RIS","CUP_arifle_G36K_RIS","CUP_arifle_HK416_CQB_Black","CUP_arifle_HK416_Black","CUP_arifle_HK_M27","CUP_arifle_HK417_12","CUP_arifle_L85A2","CUP_arifle_L85A2_NG","CUP_arifle_L86A2","CUP_srifle_M14","CUP_arifle_M16A2","CUP_arifle_M16A4_Grip","CUP_arifle_M4A1","CUP_arifle_M4A1_black","CUP_arifle_M4A3_black","CUP_arifle_mk18_black","CUP_arifle_SBR_black","CUP_arifle_Sa58P","CUP_arifle_Sa58V","CUP_arifle_Sa58RIS1","CUP_arifle_Mk16_STD","CUP_arifle_Mk16_CQC","CUP_arifle_Mk17_CQC","CUP_arifle_Mk17_STD","CUP_arifle_XM8_Carbine","CUP_arifle_XM8_Compact_Rail","CUP_lmg_UK59"}; // may be in city
+	sniperList[] = {"CUP_arifle_AKM_GL","CUP_arifle_AK47_GL","CUP_arifle_AK74_GL","CUP_arifle_AK74M_GL","CUP_arifle_AKS74U_railed","CUP_arifle_AK74M_railed","CUP_arifle_RPK74","CUP_arifle_RPK74M","CUP_arifle_CZ805_GL","CUP_arifle_G36A","CUP_arifle_AG36","CUP_arifle_MG36","CUP_arifle_MG36_camo","CUP_arifle_MG36_wdl","CUP_arifle_MG36_hex","CUP_arifle_HK416_M203_Black","CUP_arifle_HK417_20","CUP_lmg_L110A1","CUP_srifle_L129A1","CUP_arifle_L85A2_GL","CUP_srifle_M110","CUP_arifle_M16A2_GL","CUP_arifle_M16A4_GL","CUP_srifle_Mk12SPR","CUP_lmg_M240","CUP_lmg_L7A2","CUP_lmg_FNMAG","CUP_lmg_minimipara","CUP_lmg_minimi","CUP_lmg_M249_E2","CUP_lmg_M249","CUP_lmg_m249_pip3","CUP_lmg_m249_pip4","CUP_lmg_M60E4","CUP_lmg_MG3","CUP_lmg_Mk48","CUP_lmg_PKM","CUP_lmg_Pecheneg","CUP_arifle_Mk16_SV","CUP_arifle_Mk20","CUP_arifle_xm8_sharpshooter","CUP_arifle_xm8_SAW","CUP_srifle_DMR","CUP_srifle_M24_blk","CUP_srifle_M40A3","CUP_srifle_SVD","CUP_srifle_SVD_top_rail"}; //never be in city
 	
 	//AI weapon scope attachment settings. Note: weaponOpticsList will not be read if generateDynamicOptics is enabled.
-	weaponOpticsList[] = {"optic_MRCO","optic_Arco","optic_Aco","optic_ACO_grn","optic_Aco_smg","optic_ACO_grn_smg","optic_Holosight","optic_Holosight_smg","optic_MRD","optic_Yorris","Elcan_epoch","Elcan_reflex_epoch"};
+	//weaponOpticsList[] = {"optic_MRCO","optic_Arco","optic_Aco","optic_ACO_grn","optic_Aco_smg","optic_ACO_grn_smg","optic_Holosight","optic_Holosight_smg","optic_MRD","optic_Yorris","Elcan_epoch","Elcan_reflex_epoch"};
+	weaponOpticsList[] = {"CUP_optic_PSO_1","CUP_optic_PSO_3","CUP_optic_Kobra","CUP_optic_PechenegScope","CUP_optic_Eotech553_Black","CUP_optic_CompM2_Black","CUP_optic_CompM2_low","CUP_optic_CompM4","CUP_optic_MicroT1","CUP_optic_MARS","CUP_optic_SUSAT","CUP_optic_ACOG","CUP_optic_ACOG2","CUP_optic_RCO","CUP_optic_ACOG_TA01B_Black","CUP_optic_ACOG_TA01B_RMR_Black","CUP_optic_LeupoldMk4","CUP_optic_SB_11_4x20_PM","CUP_optic_LeupoldMk4_CQ_T","CUP_optic_ZDDot","CUP_optic_MRad","CUP_optic_TrijiconRx01_black","CUP_optic_ElcanM145","CUP_optic_ELCAN_SpecterDR","CUP_optic_Elcan","CUP_optic_Elcan_reflex","CUP_optic_ZeissZPoint","CUP_optic_PGO7V"};
 	
 	//AI backpack types (for AI levels 0-3). Note: backpackTypes0-3 will not be read if generateDynamicBackpacks is enabled.
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
