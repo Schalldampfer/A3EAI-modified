@@ -370,7 +370,7 @@ class CfgA3EAISettings {
 	maxLandPatrols = 6;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
-	levelChancesLand[] = {0.75,0.20,0.05,0.00};
+	levelChancesLand[] = {0.30,0.65,0.05,0.00};
 	
 	//Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 	respawnLandMinTime = 300;
