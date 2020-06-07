@@ -158,14 +158,14 @@ class CfgA3EAISettings {
 	enableTempNVGs = 0;
 	
 	//Minimum AI unit level requirement to use underslung grenade launchers. Set to -1 to disable completely. (Default: 1)
-	levelRequiredGL = 1;
+	levelRequiredGL = 2;
 	
 	//Minimum AI unit level requirement to use launcher weapons. Set to -1 to disable completely. Launchers are unlootable and will be removed at death (Default: -1)
 	levelRequiredLauncher = 2;
 	
 	//List of launcher-type weapons that AI can use.
 	//launcherTypes[] = {"launch_MRAWS_olive_F","launch_RPG32_F","launch_RPG7_F","launch_Titan_F"}; 
-	launcherTypes[] = {"CUP_launch_M72A6_Loaded","CUP_launch_RPG18_Loaded","CUP_launch_RPG7V","CUP_launch_9K32Strela"};
+	launcherTypes[] = {"CUP_launch_M72A6_Loaded","CUP_launch_RPG18_Loaded","CUP_launch_RPG7V"};
 	
 	//Maximum number of launcher weapons allowed per group (Default: 1)
 	launchersPerGroup = 3;
@@ -175,7 +175,7 @@ class CfgA3EAISettings {
 	
 	//If enabled, A3EAI will remove all explosive ammo (missiles, rockets, bombs - but not HE rounds) from spawned AI air vehicles.  (Default: 1)
 	//Affects: All AI air vehicle types (patrols/custom/reinforcement). Does not affect UAV/UGVs.
-	removeExplosiveAmmo = 0;
+	removeExplosiveAmmo = 1;
 	
 	//if enabled, AI units suffer no damage from vehicle collisions. (Default: 1)
 	noCollisionDamage = 0;
@@ -370,7 +370,7 @@ class CfgA3EAISettings {
 	maxLandPatrols = 6;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
-	levelChancesLand[] = {0.90,0.05,0.05,0.00};
+	levelChancesLand[] = {0.75,0.20,0.05,0.00};
 	
 	//Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 	respawnLandMinTime = 300;
@@ -378,6 +378,7 @@ class CfgA3EAISettings {
 	
 	//Classnames of land vehicle types to use, with the maximum amount of each type to spawn.
 	landVehicleList[] = {
+		/*
 		{"B_G_Offroad_01_armed_EPOCH",1},
 		{"B_LSV_01_armed_F",1},
 		{"B_T_LSV_01_unarmed_F",1},
@@ -387,6 +388,14 @@ class CfgA3EAISettings {
 		{"B_Truck_01_covered_EPOCH",2},
 		{"B_Truck_01_mover_EPOCH",1},
 		{"B_Truck_01_box_EPOCH",1}
+		*/
+		{"CUP_B_HMMWV_Transport_NATO_T",2},
+		{"CUP_B_M1152_NATO_T",2},
+		{"CUP_O_UAZ_Open_CSAT",2},
+		{"CUP_O_UAZ_Unarmed_CSAT",2},
+		{"B_GEN_Van_02_transport_EPOCH",1},
+		{"B_GEN_Offroad_01_gen_F",1},
+		{"C_Offroad_02_unarmed_F",2}
 	};
 	
 	//Maximum number of gunner units per land vehicle. Limited by actual number of available gunner positions. (Default: 2)
@@ -411,7 +420,9 @@ class CfgA3EAISettings {
 	//Air vehicles to use as reinforcement vehicles. Default: {"B_Heli_Transport_01_F","B_Heli_Light_01_armed_F"}
 	//Armed air vehicles will detect and engage players within reinforcement area. Unarmed air vehicles will deploy an AI paradrop group.
 	airReinforcementVehicles[] = {
-		"B_Heli_Light_01_armed_F"
+		//"B_Heli_Light_01_armed_F"
+		"CUP_I_UH1H_TK_GUE",
+		"CUP_O_UH1H_SLA"
 	};
 	
 	//Probability to spawn reinforcements for each AI level.
@@ -444,10 +455,16 @@ class CfgA3EAISettings {
 	
 	//Classnames of UAV types to use, with the maximum amount of each type to spawn.
 	UAVList[] = {
+		/*
 		{"B_UAV_02_CAS_F",2},
 		{"B_T_UAV_03_F",1},
 		{"B_UAV_05_F",1},
 		{"B_UAV_02_F",1}
+		*/
+		{"CUP_B_USMC_DYN_MQ9",1},
+		{"CUP_O_Pchela1T_RU",2},
+		{"CUP_B_Pchela1T_CDF",1},
+		{"CUP_B_AH6X_USA",1}
 	};
 	
 	//Probability of spawning Level 0/1/2/3 UAV spawns. Probabilities should add up to 1.00	
@@ -458,7 +475,7 @@ class CfgA3EAISettings {
 	respawnUAVMaxTime = 1800;
 	
 	//Set to '1' to set detection-only behavior (UAV will not directly engage enemies). (Default: 0)
-	detectOnlyUAVs = 0;
+	detectOnlyUAVs = 1;
 	
 	//Cooldown required in between air reinforcement summons when detecting players. Value in seconds. (Default: 1800)
 	UAVCallReinforceCooldown = 1800;
@@ -476,7 +493,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Global maximum number of active UGV patrols. Set at 0 to disable (Default: 0).
-	maxUGVPatrols = 3;
+	maxUGVPatrols = 0;
 	
 	//Classnames of UGV types to use, with the maximum amount of each type to spawn.
 	UGVList[] = {
@@ -599,15 +616,15 @@ class CfgA3EAISettings {
 	addHeadgearChance3 = 1.00;
 	
 	//Probabilities to equip level 0-3 AI with each weapon type. Order: {pistols, rifles, machineguns, sniper rifles}. Probabilities must add up to 1.00.
-	useWeaponChance0[] = {0.80,0.20,0.00,0.00};
-	useWeaponChance1[] = {0.20,0.80,0.00,0.00};
-	useWeaponChance2[] = {0.00,0.20,0.80,0.00};
+	useWeaponChance0[] = {0.90,0.10,0.00,0.00};
+	useWeaponChance1[] = {0.19,0.80,0.01,0.00};
+	useWeaponChance2[] = {0.00,0.19,0.80,0.01};
 	useWeaponChance3[] = {0.00,0.00,0.20,0.80};
 	
 	//Probability to select a random optics attachment (ie: scopes) for level 0-3 AI
 	opticsChance0 = 0.05;
 	opticsChance1 = 0.10;
-	opticsChance2 = 0.20;
+	opticsChance2 = 0.30;
 	opticsChance3 = 1.00;
 	
 	//Probability to select a random pointer attachment (ie: flashlights) for level 0-3 AI
@@ -618,7 +635,7 @@ class CfgA3EAISettings {
 	
 	//Probability to select a random muzzle attachment (ie: suppressors) for level 0-3 AI
 	muzzleChance0 = 0.00;
-	muzzleChance1 = 0.05;
+	muzzleChance1 = 0.01;
 	muzzleChance2 = 0.10;
 	muzzleChance3 = 0.30;
 	
@@ -633,9 +650,9 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Maximum amount of Krypto generated for level 0-3 AI. Actual amount will be randomized up to the specified amount.
-	kryptoAmount0 = 10;
-	kryptoAmount1 = 25;
-	kryptoAmount2 = 100;
+	kryptoAmount0 = 20;
+	kryptoAmount1 = 50;
+	kryptoAmount2 = 200;
 	kryptoAmount3 = 500;
 	
 	//Krypto pickup assist time window in seconds. Players must be within 2 meters of a Krypto device for 5 seconds to pick up Krypto automatically. 0: Disabled (Default: 0)
