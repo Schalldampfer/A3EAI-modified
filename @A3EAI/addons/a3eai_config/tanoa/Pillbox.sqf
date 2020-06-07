@@ -12,7 +12,7 @@ diag_log "[AI city] Pillbox spawn points & crates";
 _crate_type = "Box_Syndicate_Ammo_F";
 _crate_weapons = A3EAI_sniperList + A3EAI_machinegunList;
 _crate_magazines = A3EAI_MiscLoot1 + A3EAI_MiscLoot2;
-_crate_items = A3EAI_weaponOpticsList + ["optic_NVS","optic_Nightstalker","optic_LRPS","Repair_EPOCH","Heal_EPOCH","ItemGeigerCounter_EPOCH","radiation_mask_epoch"];
+_crate_items = A3EAI_weaponOpticsList + ["CUP_optic_NSPU","CUP_optic_PSO_3","CUP_optic_AN_PVS_4_M16","CUP_optic_AN_PVS_4_M14","CUP_optic_LeupoldMk4","CUP_optic_SB_11_4x20_PM","CUP_optic_SB_3_12x50_PMII","CUP_optic_LeupoldMk4_25x50_LRT","Repair_EPOCH","Heal_EPOCH","ItemGeigerCounter_EPOCH","radiation_mask_epoch"];
 _num_weapons = 3;
 _num_magazines = 8;
 _num_items = 4;

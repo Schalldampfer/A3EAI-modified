@@ -10,19 +10,19 @@ private ["_grp","_crate_type","_crate_pos","_crate_dirAndUp","_crate_weapons","_
 	//[["B_static_AA_F",[12112.4,2504.06,0],[],0,"CAN_COLLIDE"], [[-0.573876,0.818942,0],[0,0,1]]],
 	//[["B_static_AA_F",[12036.6,2465.73,0],[],0,"CAN_COLLIDE"], [[-0.992997,0.118142,0],[0,0,1]]],
 	//[["B_static_AA_F",[12049.9,2437.2,0],[],0,"CAN_COLLIDE"], [[-0.787191,-0.616709,0],[0,0,1]]],
-	[["B_GMG_01_high_F",[12055.1,2426.89,4.76837e-007],[],0,"CAN_COLLIDE"], [[-0.189876,-0.981808,0],[0,0,1]]],
-	[["B_GMG_01_high_F",[12032.9,2465.56,4.76837e-007],[],0,"CAN_COLLIDE"], [[-0.956382,0.292119,0],[0,0,1]]],
-	[["B_GMG_01_high_F",[12146.9,2518.64,4.76837e-007],[],0,"CAN_COLLIDE"], [[0.630638,0.776077,0],[0,0,1]]],
-	[["B_GMG_01_high_F",[12145.9,2497.08,0.00842953],[],0,"CAN_COLLIDE"], [[0.492774,-0.869336,0.0378034],[0.0627533,0.0788351,0.994911]]],
-	[["B_GMG_01_high_F",[12125.1,2473.99,4.76837e-007],[],0,"CAN_COLLIDE"], [[0.333662,0.942693,0],[0,0,1]]],
-	[["B_HMG_01_high_F",[12201.3,2449.99,0],[],0,"CAN_COLLIDE"], [[0.918129,-0.396281,0],[0,0,1]]],
-	[["B_HMG_01_high_F",[12184.1,2490.07,0],[],0,"CAN_COLLIDE"], [[0.526247,0.850332,0],[0,0,1]]],
-	[["B_HMG_01_high_F",[12144.1,2573.21,0],[],0,"CAN_COLLIDE"], [[-0.794685,0.607023,0],[0,0,1]]],
-	[["B_HMG_01_high_F",[12070.6,2559.3,0],[],0,"CAN_COLLIDE"], [[0.821772,0.569817,0],[0,0,1]]],
-	[["B_HMG_01_high_F",[12035.3,2519.48,0],[],0,"CAN_COLLIDE"], [[-0.482777,-0.875743,0],[0,0,1]]],
-	[["B_HMG_01_high_F",[11997.4,2478.19,0],[],0,"CAN_COLLIDE"], [[-0.927001,0.375058,0],[0,0,1]]],
-	[["B_HMG_01_high_F",[12043.2,2392.39,-0.00235534],[],0,"CAN_COLLIDE"], [[-0.2171,-0.974795,-0.0514073],[0.0026744,-0.0532572,0.998577]]],
-	[["B_HMG_01_high_F",[12158.5,2441.5,0],[],0,"CAN_COLLIDE"], [[-0.494033,-0.869443,0],[0,0,1]]]
+	[["I_GMG_01_high_F",[12055.1,2426.89,4.76837e-007],[],0,"CAN_COLLIDE"], [[-0.189876,-0.981808,0],[0,0,1]]],
+	[["I_GMG_01_high_F",[12032.9,2465.56,4.76837e-007],[],0,"CAN_COLLIDE"], [[-0.956382,0.292119,0],[0,0,1]]],
+	[["I_GMG_01_high_F",[12146.9,2518.64,4.76837e-007],[],0,"CAN_COLLIDE"], [[0.630638,0.776077,0],[0,0,1]]],
+	[["I_GMG_01_high_F",[12145.9,2497.08,0.00842953],[],0,"CAN_COLLIDE"], [[0.492774,-0.869336,0.0378034],[0.0627533,0.0788351,0.994911]]],
+	[["I_GMG_01_high_F",[12125.1,2473.99,4.76837e-007],[],0,"CAN_COLLIDE"], [[0.333662,0.942693,0],[0,0,1]]],
+	[["I_HMG_02_high_F",[12201.3,2449.99,0],[],0,"CAN_COLLIDE"], [[0.918129,-0.396281,0],[0,0,1]]],
+	[["I_HMG_02_high_F",[12184.1,2490.07,0],[],0,"CAN_COLLIDE"], [[0.526247,0.850332,0],[0,0,1]]],
+	[["I_HMG_02_high_F",[12144.1,2573.21,0],[],0,"CAN_COLLIDE"], [[-0.794685,0.607023,0],[0,0,1]]],
+	[["I_HMG_02_high_F",[12070.6,2559.3,0],[],0,"CAN_COLLIDE"], [[0.821772,0.569817,0],[0,0,1]]],
+	[["I_HMG_02_high_F",[12035.3,2519.48,0],[],0,"CAN_COLLIDE"], [[-0.482777,-0.875743,0],[0,0,1]]],
+	[["I_HMG_02_high_F",[11997.4,2478.19,0],[],0,"CAN_COLLIDE"], [[-0.927001,0.375058,0],[0,0,1]]],
+	[["I_HMG_02_high_F",[12043.2,2392.39,-0.00235534],[],0,"CAN_COLLIDE"], [[-0.2171,-0.974795,-0.0514073],[0.0026744,-0.0532572,0.998577]]],
+	[["I_HMG_02_high_F",[12158.5,2441.5,0],[],0,"CAN_COLLIDE"], [[-0.494033,-0.869443,0],[0,0,1]]]
 ] call AIcity_spawn_manStatic;
 
 //units
@@ -43,9 +43,9 @@ private ["_grp","_crate_type","_crate_pos","_crate_dirAndUp","_crate_weapons","_
 _crate_type = "I_supplyCrate_F";
 _crate_pos = [12063.9,2457.53,4.3205];
 _crate_dirAndUp = [[6.2618566,4.2429647,0.0053377044],[0,0,1]];
-_crate_weapons = A3EAI_sniperList + ["arifle_Katiba_GL_F","arifle_MX_GL_F","arifle_MXM_khk_F","arifle_ARX_ghex_F","a2_dmr_epoch","srifle_GM6_F","srifle_DMR_04_F","srifle_DMR_05_tan_f","MultiGun"];
-_crate_magazines = A3EAI_MiscLoot1 + A3EAI_MiscLoot2 + ["1Rnd_HE_Grenade_shell","3Rnd_HE_Grenade_shell","5Rnd_127x108_Mag","10Rnd_127x54_Mag","10Rnd_93x64_DMR_05_Mag","SatchelCharge_Remote_Mag","Laserbatteries"];
-_crate_items = A3EAI_weaponOpticsList + ["optic_NVS","optic_Nightstalker","optic_LRPS","Repair_EPOCH","Heal_EPOCH","ItemGeigerCounter_EPOCH","radiation_mask_epoch"];
+_crate_weapons = A3EAI_sniperList;
+_crate_magazines = A3EAI_MiscLoot1 + A3EAI_MiscLoot2 + ["SatchelCharge_Remote_Mag","Laserbatteries"];
+_crate_items = A3EAI_weaponOpticsList + ["CUP_optic_CWS","CUP_optic_GOSHAWK","CUP_optic_AN_PVS_10_black","CUP_optic_AN_PAS_13c1","CUP_optic_AN_PAS_13c2","Repair_EPOCH","Heal_EPOCH","ItemGeigerCounter_EPOCH","radiation_mask_epoch"];
 _num_weapons = 4;
 _num_magazines = 10;
 _num_items = 6;
