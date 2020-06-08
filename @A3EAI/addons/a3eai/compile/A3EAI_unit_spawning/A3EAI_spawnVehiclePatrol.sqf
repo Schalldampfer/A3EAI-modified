@@ -51,6 +51,7 @@ _driver = [_unitGroup,_unitLevel,[0,0,0]] call A3EAI_createUnit;
 
 _vehicle = createVehicle [_vehicleType, _vehiclePosition, [], 0, _spawnMode];
 _driver moveInDriver _vehicle;
+_vehicle limitSpeed 40;
 
 _vehicle call A3EAI_protectObject;
 _vehicle call A3EAI_secureVehicle;
