@@ -37,8 +37,8 @@ switch(toLower worldName)do{
 		call compile preprocessFileLineNumbers "A3EAI_config\tanoa\Others.sqf";
 	};
 	case "malden":{
-		//call compile preprocessFileLineNumbers "A3EAI_config\malden\Pillbox.sqf";
-		//call compile preprocessFileLineNumbers "A3EAI_config\malden\TreasureHunting.sqf";
+		call compile preprocessFileLineNumbers "A3EAI_config\malden\Pillbox.sqf";
+		call compile preprocessFileLineNumbers "A3EAI_config\malden\TreasureHunting.sqf";
 		//[8000,10050,0] execVM "A3EAI_config\maze\maze.sqf";
 	};
 	default {};
