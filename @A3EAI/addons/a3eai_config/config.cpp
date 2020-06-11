@@ -168,7 +168,7 @@ class CfgA3EAISettings {
 	launcherTypes[] = {"CUP_launch_M72A6_Loaded","CUP_launch_RPG18_Loaded","CUP_launch_RPG7V"};
 	
 	//Maximum number of launcher weapons allowed per group (Default: 1)
-	launchersPerGroup = 3;
+	launchersPerGroup = 2;
 	
 	//Enable or disable AI self-healing. Level 0 AI cannot self-heal. Affects: All AI infantry units (Default: 1). 
 	enableHealing = 1;
@@ -367,7 +367,7 @@ class CfgA3EAISettings {
 
 	
 	//Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-	maxLandPatrols = 6;
+	maxLandPatrols = 4;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 	levelChancesLand[] = {0.30,0.65,0.05,0.00};
