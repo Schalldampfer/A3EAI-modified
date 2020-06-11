@@ -10,7 +10,7 @@ diag_log "[AI city] Pillbox spawn points & crates";
 		_poss = [_x] call BIS_fnc_buildingPositions;
 		if (count _poss > 0) then {
 			//AI
-			[format["%1%2",_type,_forEachIndex],getPos _x,50,round(random 3) + 2,round(random 2),true,3600] call A3EAI_createCustomInfantryQueue;
+			[format["%1%2",_type,_forEachIndex],getPos _x,25,round(random 3) + 2,round(random 2),true,3600] call A3EAI_createCustomInfantryQueue;
 		};
 	} forEach ([worldSize/2,worldSize/2,0] nearObjects [_type,worldSize]);
 } forEach ["Land_Bunker_01_HQ_F","Land_Bunker_01_small_F","Land_Bunker_01_tall_F","Land_Bunker_01_big_F"];//"Cargo_House_base_F"
