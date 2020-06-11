@@ -39,7 +39,7 @@ switch(toLower worldName)do{
 	case "malden":{
 		//call compile preprocessFileLineNumbers "A3EAI_config\malden\Pillbox.sqf";
 		//call compile preprocessFileLineNumbers "A3EAI_config\malden\TreasureHunting.sqf";
-		[8000,10050,0] execVM "A3EAI_config\maze\maze.sqf";
+		//[8000,10050,0] execVM "A3EAI_config\maze\maze.sqf";
 	};
 	default {};
 };
