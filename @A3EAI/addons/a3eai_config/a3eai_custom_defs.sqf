@@ -44,3 +44,4 @@ switch(toLower worldName)do{
 	};
 	default {};
 };
+call compile preprocessFileLineNumbers format["A3EAI_config\%1\Others.sqf",toLower worldName];
