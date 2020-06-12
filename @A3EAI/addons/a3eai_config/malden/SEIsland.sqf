@@ -20,7 +20,7 @@ _num_items = 4;
 ] call AIcity_spawn_manStatic;
 
 [
-	//Center
+	//SE Island Center
 	[["I_E_Radar_System_01_F",[10532.2,4053.03,0],[],0,"CAN_COLLIDE"], [[-0.321554,-0.946871,0.00617332],[0.0191948,0,0.999816]]]
 ] call AIcity_spawn_autoStatic;
 
