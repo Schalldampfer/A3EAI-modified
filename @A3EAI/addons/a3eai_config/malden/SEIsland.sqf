@@ -30,7 +30,9 @@ _num_items = 4;
 ["SEI_aaPatrol",[10122.8,3999.33,0],"CUP_I_Datsun_AA_Random",200,[0,1],2,false,0] call A3EAI_createCustomVehicleQueue;
 
 //Infantry patrol
-["SEI_east1",[9785.1,3896.06,3.93763],20,round(random 3)+6,round(random 2)+1,false,0] call A3EAI_createCustomInfantryQueue;
-["SEI_east2",[9785.1,3896.06,0],20,round(random 3)+6,round(random 2)+1,false,0] call A3EAI_createCustomInfantryQueue;
-["SEI_west1",[11602,4443.6,3.93753],20,round(random 3)+6,round(random 2)+1,false,0] call A3EAI_createCustomInfantryQueue;
-["SEI_west2",[11602,4443.6,0],20,round(random 3)+6,round(random 2)+1,false,0] call A3EAI_createCustomInfantryQueue;
+["SEI_east1",[11602,4443.6,3.93753],20,round(random 3)+6,round(random 2),false,0] call A3EAI_createCustomInfantryQueue;
+["SEI_east2",[11648.3,4437.79,0.185],20,round(random 3)+6,round(random 2),false,0] call A3EAI_createCustomInfantryQueue;
+["SEI_east3",[11607.6,4484.26,0],20,round(random 3)+2,round(random 2)+1,false,0] call A3EAI_createCustomInfantryQueue;
+["SEI_west1",[9785.1,3896.06,3.93763],20,round(random 3)+6,round(random 2),false,0] call A3EAI_createCustomInfantryQueue;
+["SEI_west2",[9771.53,3869.09,3.938],20,round(random 3)+6,round(random 2),false,0] call A3EAI_createCustomInfantryQueue;
+["SEI_west3",[9782.53,3929.55,0.320999],20,round(random 3)+2,round(random 2)+1,false,0] call A3EAI_createCustomInfantryQueue;
