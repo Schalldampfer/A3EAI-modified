@@ -16,3 +16,14 @@ diag_log "Loading Malden Objects";
 ];
 
 ["NEMB_Patrol",[7435.89,10586.9,0],"CUP_O_BTR40_MG_TKM",250,[4,1],1,false,0] call A3EAI_createCustomVehicleQueue;
+
+[] spawn {
+	waitUntil {!isNil "blck_locationBlackList"};
+
+	//Forts
+	{
+		{
+			blck_locationBlackList pushback [getPos _x,300];
+		} forEach ([worldSize/2,worldSize/2,0] nearObjects [_x,worldSize]);
+	} forEach ["Land_Bunker_01_HQ_F","Land_Bunker_01_small_F","Land_Bunker_01_tall_F","Land_Bunker_01_big_F"];
+};
