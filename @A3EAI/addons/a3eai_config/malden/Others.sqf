@@ -14,3 +14,5 @@ diag_log "Loading Malden Objects";
 	["B_Radar_System_01_F",[5547.73,7912.75,0],130.230],
 	["CUP_B_M119_US",[5430.44,8442.12,0],48.765]
 ];
+
+["NEMB_Patrol",[7435.89,10586.9,0],"CUP_O_BTR40_MG_TKM",250,[4,1],1,false,0] call A3EAI_createCustomVehicleQueue;
