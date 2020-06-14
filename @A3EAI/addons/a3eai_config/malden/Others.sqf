@@ -20,10 +20,16 @@ diag_log "Loading Malden Objects";
 [] spawn {
 	waitUntil {!isNil "blck_locationBlackList"};
 
+	//NW Island
+	blck_locationBlackList pushback [[1000,12100,0],1000];
+
+	//SE Island
+	blck_locationBlackList pushback [[10500,3800,0],2000];
+
 	//Forts
 	{
 		{
-			blck_locationBlackList pushback [getPos _x,300];
+			blck_locationBlackList pushback [getPos _x,700];
 		} forEach ([worldSize/2,worldSize/2,0] nearObjects [_x,worldSize]);
 	} forEach ["Land_Bunker_01_HQ_F","Land_Bunker_01_small_F","Land_Bunker_01_tall_F","Land_Bunker_01_big_F"];
 };
