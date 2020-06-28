@@ -321,7 +321,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/		
 
 	//Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
-	maxAirPatrols = 0;
+	maxAirPatrols = 1;
 	
 	//Probability of spawning Level 0/1/2/3 AI air vehicle patrol spawns. Probabilities should add up to 1.00		
 	levelChancesAir[] = {0.80,0.20,0.0,0.0};
@@ -332,9 +332,9 @@ class CfgA3EAISettings {
 	
 	//Classnames of air vehicle types to use, with the maximum amount of each type to spawn.
 	airVehicleList[] = {
-		{"B_Plane_Fighter_01_Cluster_F",1},
-		{"B_T_VTOL_01_infantry_F",1},
-		{"B_Heli_Transport_03_unarmed_F",1}
+		{"CUP_B_MH6J_USA",1},
+		{"CUP_B_MH6M_USA",1},
+		{"O_Heli_Transport_04_bench_EPOCH",1}
 	};
 	
 	//Maximum number of gunner units per air vehicle. Limited by actual number of available gunner positions. (Default: 2)
@@ -355,7 +355,7 @@ class CfgA3EAISettings {
 	
 	//Number of infantry AI to paradrop if players are nearby when helicopter is investigating a waypoint, or if helicopter is reinforcing a dynamic AI spawn. Limited by number of cargo seats available in the vehicle. (Default: 3)
 	//Affects: Air vehicle patrols, air reinforcements.
-	paradropAmount = 5;
+	paradropAmount = 8;
 	
 	
 	/*	AI Land Vehicle patrol settings. These AI vehicles will randomly travel between different cities and towns.
@@ -367,7 +367,7 @@ class CfgA3EAISettings {
 
 	
 	//Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-	maxLandPatrols = 4;
+	maxLandPatrols = 3;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 	levelChancesLand[] = {0.30,0.65,0.05,0.00};
@@ -421,8 +421,8 @@ class CfgA3EAISettings {
 	//Armed air vehicles will detect and engage players within reinforcement area. Unarmed air vehicles will deploy an AI paradrop group.
 	airReinforcementVehicles[] = {
 		//"B_Heli_Light_01_armed_F"
-		"CUP_I_UH1H_TK_GUE",
-		"CUP_O_UH1H_SLA"
+		"CUP_B_MV22_USMC_RAMPGUN",
+		"CUP_B_Merlin_HC3_Armed_GB"
 	};
 	
 	//Probability to spawn reinforcements for each AI level.
@@ -451,7 +451,7 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Global maximum number of active UAV patrols. Set at 0 to disable (Default: 0).
-	maxUAVPatrols = 3;
+	maxUAVPatrols = 2;
 	
 	//Classnames of UAV types to use, with the maximum amount of each type to spawn.
 	UAVList[] = {
@@ -461,8 +461,8 @@ class CfgA3EAISettings {
 		{"B_UAV_05_F",1},
 		{"B_UAV_02_F",1}
 		*/
-		{"CUP_B_USMC_DYN_MQ9",1},
-		{"CUP_O_Pchela1T_RU",2},
+		{"C_IDAP_UAV_06_antimine_F",1},
+		{"CUP_O_Pchela1T_RU",1},
 		{"CUP_B_Pchela1T_CDF",1},
 		{"CUP_B_AH6X_USA",1}
 	};
@@ -475,7 +475,7 @@ class CfgA3EAISettings {
 	respawnUAVMaxTime = 1800;
 	
 	//Set to '1' to set detection-only behavior (UAV will not directly engage enemies). (Default: 0)
-	detectOnlyUAVs = 1;
+	detectOnlyUAVs = 0;
 	
 	//Cooldown required in between air reinforcement summons when detecting players. Value in seconds. (Default: 1800)
 	UAVCallReinforceCooldown = 1800;
@@ -493,14 +493,16 @@ class CfgA3EAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/
 
 	//Global maximum number of active UGV patrols. Set at 0 to disable (Default: 0).
-	maxUGVPatrols = 0;
+	maxUGVPatrols = 2;
 	
 	//Classnames of UGV types to use, with the maximum amount of each type to spawn.
 	UGVList[] = {
-		{"B_UGV_01_F",1},
-		{"B_T_UGV_01_olive_F",1},
-		{"B_T_UGV_01_rcws_olive_F",2},
-		{"B_UGV_01_rcws_F",2}
+		{"I_E_UGV_01_F",1},
+		{"I_E_UGV_02_Science_F",1},
+		{"I_E_UGV_02_Demining_F",1},
+		{"I_UGV_01_F",1},
+		{"I_UGV_02_Science_F",1},
+		{"I_UGV_02_Demining_F",1}
 	};
 	
 	//Probability of spawning Level 0/1/2/3 AI UGV spawns. Probabilities should add up to 1.00	
