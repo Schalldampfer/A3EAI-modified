@@ -10,8 +10,8 @@ _num_weapons = 4;
 _num_magazines = 10;
 _num_items = 4;
 
-["Box_FIA_Support_F", [9785.1,3896.06,3.93763], [[0,1,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
-["Box_FIA_Wps_F", [11602,4443.6,3.93753], [[0,1,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
+["Box_FIA_Support_F", [9753.2,3902.57,0], [[0,1,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
+["Box_FIA_Wps_F", [11612.2,4448.66,0], [[-0.621138,0.783701,0],[0,0,1]], [_crate_weapons, _num_weapons], [_crate_magazines, _num_magazines], [_crate_items, _num_items]] call AIcity_spawn_crate;
 
 //Static Weapons
 [
