@@ -140,7 +140,7 @@ class CfgA3EAISettings {
 	minAI_remoteArea = 1;
 	addAI_remoteArea = 2;
 	unitLevel_remoteArea = 0;
-	spawnChance_remoteArea = 0.50;
+	spawnChance_remoteArea = 0.00;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_wilderness = 1;
