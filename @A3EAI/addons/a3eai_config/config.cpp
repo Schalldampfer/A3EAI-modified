@@ -347,7 +347,7 @@ class CfgA3EAISettings {
 	
 	//Probability of AI to deploy infantry units by parachute if players are nearby when helicopter is investigating a waypoint. (Default: 0.50)
 	//Affects: Air vehicle patrols.
-	paradropChance = 0.30;
+	paradropChance = 1.00;
 	
 	//Cooldown time for AI paradrop deployment in seconds. (Default: 1800).
 	//Affects: Air vehicle patrols.
